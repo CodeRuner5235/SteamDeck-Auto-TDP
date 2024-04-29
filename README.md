@@ -67,10 +67,10 @@ Q: I installed but the slider still says 15w
 
 A: The script will set the TDP, but it wont change what the slider says. I don't know how to make it do that. You can check the current max TDP with
   ```bash
-  cat /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/hwmon/hwmon5/power1_cap
+  cat /sys/class/hwmon/hwmon6/power1_cap
   ```
   and
   ```bash
-  cat /sys/devices/pci0000:00/0000:00:08.1/0000:04:00.0/hwmon/hwmon5/power2_cap
+  cat /sys/class/hwmon/hwmon6/power2_cap
   ```
   both should read your current max TDP in microwatts (six extra zeros).
